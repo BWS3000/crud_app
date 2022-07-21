@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+:root{
+  --dark: #2b2d42;
+  --light: #adb5bd;
+  --border: #dee2e6;
+  --border-btn: #edf2f4;
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.container{
+  max-width: 1024px;
+  margin: auto;
+}
+
+.nav-brand{
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.d-flex{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.justify-between{
+  justify-content: space-between;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.border-shadow{
+  border: 1px solid var(--border-btn);
+  box-shadow: 1px 3px 10px #e9ecef;
+}
+
+.text-dark{
+ color: var(--dark);
+}
+
+.inline{
+  display: inline-block;
+}
+
+.text-light {
+  color: var(--light);
+}
+
+.text-gradient{
+  background: linear-gradient(to right, #8e2de2, #412de2)
+  -webkit-background-clip: text;
+  background-clip-text: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#header nav{
+  background-color: #06d6a0;
+  padding: 1em 0;
+  width: 100%;
+}
+
+#site-main .container .box-nav > a{
+  margin-top: 6em;
+  font-family: 'Roboto Mono', monospace;
+}
+#site-main .container form{
+  margin: 2em 0;
+}
+
+table {
+  border-spacing: 0px;
+  width: 100%;
+}
+.table td .table th{
+  padding: .75em;
+  vertical-align: top;
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+.table td > a.btn{
+  padding: .3em 1em;
+  font-size: 1.1em;
+  margin: 0 .2em;
+}
+
+.table tr:hover{
+  background-color: #06d6a0;
+}
+
+.table tr:hover > a{
+  box-shadow: none;
+}
