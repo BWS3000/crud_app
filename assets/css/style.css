@@ -63,7 +63,6 @@ a {
   background: linear-gradient(to right, #8e2de2, #412de2)
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 #header nav{
