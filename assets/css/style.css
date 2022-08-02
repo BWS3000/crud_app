@@ -152,11 +152,12 @@ table {
   margin: auto;
 }
 
-#update_user .form-group, #add_user .form-group{
+#update_user .form-group, #add_user .form-group {
   margin: .4em 0;
 }
 
-#update_user .form-group input[type="text"], #add_user .form-group input[type="text"]{ */
+#update_user .form-group input[type="text"],
+ #add_user .form-group input[type="text"] {
   width: 100%;
   padding: .6em 1em;
   margin: .5em 0;
@@ -166,19 +167,24 @@ table {
   border-radius: .2em;
 }
 
-#update_user .form-group .radio, #add_user .form-group .radio {
+#update_user .form-group .radio,
+ #add_user .form-group .radio {
   margin: 1em  2em;
-
 }
 
 /* styling for radio buttons */
+
+.radio input[type="radio"]{
+  position: absolute;
+  opacity: 0;
+}
 
 .radio input[type="radio"]+ .radio-label:before{
   content: "";
   background: var(--border-btn);
   border-radius: 100%;
-  border-radius: 1px solid var(--border);
-  display:  inline-block;
+  border: 1px solid var(--border);
+  display: inline-block;
   width: 1em;
   height: 1em;
   position: relative;
@@ -187,8 +193,8 @@ table {
   vertical-align: top;
   cursor: pointer;
   text-align: center;
-  -webkit-transition: all 250ms ease;
-  transition: all 250ms ease;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
 }
 
 .radio input[type="radio"]:checked + .radio-label:before{
