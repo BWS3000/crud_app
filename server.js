@@ -24,18 +24,7 @@ app.use('/css',express.static(path.resolve(__dirname, "assets/css")))  //22:00
 app.use('/img',express.static(path.resolve(__dirname, "assets/img")))
 app.use('/js',express.static(path.resolve(__dirname, "assets/js")))
 
-
-app.get('/', (req,res)=> {
-  //Render allows us to render a html file (ejs = embeded JS)
-  res.render('index.ejs');
-})
-
-app.get('/add-user', (req,res)=> {
-  res.render('add_user');
-})
-
-app.get('/update-user', (req,res)=> {
-  res.render('update_user');
-})
+//Load routes
+app.use('/',require("./server/routes/router"))
 
 app.listen(PORT, ()=> { console.log(`Server is running on http://localhost:${PORT}`)});
