@@ -30,6 +30,24 @@ exports.create = (req, res) => {
 
 //get all users / get a single user
 exports.find = (req,res) => {
+if(req.query.id) {
+  const id = req.query.id;
+
+  Userdb.findById(id)
+    .then(data => {
+      if(!data){
+        res.status(404).send({message : `User not found ${id}`})
+      } else {
+        res.send(data)
+      }
+    }).catch(err =>{
+      res.status(500).send({message: `Error when getting user with id ${id}`})
+    })
+} else {
+
+
+
+
 Userdb.find()
 .then(user => {
   res.send(user)
@@ -37,6 +55,7 @@ Userdb.find()
   .catch(err => {
     res.status(500).send({message : err.message || "Error Occured while getting user information"})
   })
+  }
 }
 
 //update user using user id
