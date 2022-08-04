@@ -23,7 +23,6 @@ route.get('/update-user', services.update_user);
 //Export route so that server.js can use it
 
 //Api
-
 route.post('/api/users', controller.create);
 route.get('/api/users', controller.find);
 route.put('/api/users/:id', controller.update);
