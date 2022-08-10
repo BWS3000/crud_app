@@ -25,7 +25,7 @@ $("#update_user").submit(function(event) {
 
 if(window.location.pathname== "/") {
   $ondelete = $(".table tbody td a.delete");
-  $ondelete.clock(function() {
+  $ondelete.click(function() {
     var id = $(this).attr("data-id")
 
     var request = {
